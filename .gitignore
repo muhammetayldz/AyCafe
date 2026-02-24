@@ -1,3 +1,4 @@
+# --- ANDROID SPECIFIC ---
 # Gradle files
 .gradle/
 build/
@@ -16,7 +17,7 @@ captures/
 *.apk
 output-metadata.json
 
-# IntelliJ
+# IntelliJ / Android Studio
 *.iml
 .idea/
 misc.xml
@@ -27,8 +28,20 @@ render.experimental.xml
 *.jks
 *.keystore
 
-# Google Services (e.g. APIs or Firebase)
-google-services.json
-
 # Android Profiling
 *.hprof
+
+# --- FIREBASE & BACKEND SPECIFIC ---
+# Firebase Cloud Functions (iyzi klasörü için)
+**/node_modules/
+**/npm-debug.log
+**/.firebase/
+**/firebase-debug.log
+**/functions/node_modules/
+
+# Firebase configuration (Genelde eklenmez ama hocanın çalıştırabilmesi için isteğe bağlıdır)
+# google-services.json
+
+# Environment variables (Hassas anahtarlar için)
+.env
+.env.local
